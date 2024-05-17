@@ -13,10 +13,15 @@ export class RecipeListComponent implements OnInit {
 
   constructor(
     private readonly recipeService:RecipeService
-  ) { }
+  ) { 
+    console.log("Ingresa a Constructor");
+    
+  }
 
   ngOnInit(): void {
     this.obtenerListadoRecetas();
+    console.log("Inicia NgOninit");
+    
   }
 
 
@@ -27,6 +32,12 @@ export class RecipeListComponent implements OnInit {
       console.log(" this.recipe: " , this.recipe);
       
     })
+  }
+
+  ngOnDestroy(){
+    console.log("ngOnDestroy close");
+    
+
   }
 
 }

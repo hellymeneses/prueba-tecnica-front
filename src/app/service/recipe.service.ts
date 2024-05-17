@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Recipes } from '../interfaces/recipes';
+import { Elemento } from '../interfaces/elemento';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class RecipeService {
   ) { }
 
 
-  public obtenerRecetas() :Observable<Recipes[]>{
-    return this.http.get<Recipes[]>(this.url);
+  public obtenerRecetas() :Observable<Elemento[]>{
+    return this.http.get<Elemento[]>(this.url);
   }
 }

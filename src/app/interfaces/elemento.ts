@@ -17,5 +17,5 @@ export interface Elemento{
     rating: number,
     reviewCount:number,
     mealType:string
-
+    favorite: boolean;
 }

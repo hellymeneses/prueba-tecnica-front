@@ -13,10 +13,15 @@ export class RecipeFormComponent implements OnInit {
 
   constructor(
     private readonly fb: FormBuilder
-  ) { }
+  ) { 
+    console.log("Inicia el constructor");
+    
+  }
 
   ngOnInit(): void {
     this.crearFormulario();
+    console.log("Inicia el ngOninit");
+    
   }
 
 
@@ -48,8 +53,18 @@ export class RecipeFormComponent implements OnInit {
 
   onSubmit(){
     if(this.formulario.invalid) return ;
-
     console.log("Formulario:" , this.formulario.value);
+
+    if(this.formulario.valid){
+      this.formulario
+    }
+    
+    this.formulario.reset();
+    console.log("Formulario reset:" , this.formulario.value);
+  }
+
+  ngOnDestroy(){
+    console.log("ngOnDestroy close ");
     
   }
 
