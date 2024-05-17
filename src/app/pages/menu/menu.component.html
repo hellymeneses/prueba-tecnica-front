@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-dark p-4">
+            <li><a [routerLink]="['/list-recipe']">Recetas</a></li>
+            <li><a [routerLink]="['/form-recipe']">Agregar Receta</a></li>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+</div>
+
+<router-outlet></router-outlet>

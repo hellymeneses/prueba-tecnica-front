@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row" style="margin: 40px;">
+      <div *ngIf="recipe.length<=0" >
+        <h1>No hay elementos para mostrar </h1>
+      </div>
+        <div class="col-4" *ngFor="let item of recipe" style="margin-top: 20px;">
+         
+            <div class="card" style="width: 18rem;">
+                <img src={{item.image}} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.name}}</h5>
+                  <p class="card-text">{{item.id}}</p>
+                  <p class="card-text">Ingredientes: {{item.ingredients}}</p>
+               
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Instrucciones:  {{item.instructions}}</li>
+                  <li class="list-group-item">{{item.prepTimeMinutes}}</li>
+                  <li class="list-group-item">{{item.cookTimeMinutes}}</li>
+                  <li class="list-group-item">{{item.servings}}</li>
+                  <li class="list-group-item">{{item.difficulty}}</li>
+                  <li class="list-group-item">{{item.cuisine}}</li>
+                  <li class="list-group-item">{{item.caloriesPerServing}}</li>
+                  <li class="list-group-item">{{item.tags}}</li>
+                  <li class="list-group-item">{{item.userId}}</li>
+                  <li class="list-group-item">{{item.rating}}</li>
+                  <li class="list-group-item">{{item.reviewCount}}</li>
+                  <li class="list-group-item">{{item.mealType}}</li>
+                </ul>
+              </div>
+
+        </div>
+    </div>
+</div>
